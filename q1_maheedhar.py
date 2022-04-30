@@ -1,13 +1,10 @@
+from collections import Counter
 def optimalways(colour_arr):
  
 
     c = 0
-    colour_count_dict ={}
-    for i in colour_arr:
-        if i in colour_count_dict.keys():
-            colour_count_dict[i] = colour_count_dict[i] + 1
-        else:
-            colour_count_dict[i] = 1
+    colour_count_dict = Counter(colour_arr)
+
     total_optimal_ways = 0
     for i in colour_count_dict.keys():
         k = colour_count_dict[i]
